@@ -1,0 +1,10 @@
+while(true) {
+    var enemy = hero.findNearestEnemy();
+    var flag = hero.findFlag();
+    if(flag) {
+        // Подберите флаг.
+        hero.pickUpFlag(flag);
+    } else if (enemy) {
+        // Сражайся!
+        hero.attack(enemy);
+    }
