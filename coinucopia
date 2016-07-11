@@ -1,0 +1,9 @@
+while(true) {
+    var flag = hero.findFlag("green");
+    if (flag) {
+        hero.pickUpFlag(flag);
+    }
+    else {
+        hero.say("Поставь флаг, чтобы я знал куда идти.");
+    }
+}
