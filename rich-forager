@@ -1,0 +1,22 @@
+// Используй "if" или "else if" для принятия решений в любой ситуации.
+// Совмести их чтобы собрать монеты и победить врагов!
+// Рекомендовано иметь 400 ед. здоровья. Убедись, что купил хорошую броню.
+
+while(true) {
+    var flag = hero.findFlag();
+    var enemy = hero.findNearestEnemy();
+    var item = hero.findNearestItem();
+
+    if (flag) {
+        // Что делать когда я вижу флаг?
+        hero.pickUpFlag(flag);
+    }
+    else if (enemy) {
+        // Что делать когда я обнаружу противника?
+        hero.attack(enemy);
+    }
+    else if (item) {
+        // Что делать когда я нахожу предметы?
+        hero.moveXY(item.pos.x, item.pos.y);
+    }
+}
