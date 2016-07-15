@@ -1,0 +1,18 @@
+
+while(true) {
+    var green = hero.findFlag("green");
+    var black = hero.findFlag("black");
+    var nearest = hero.findNearestEnemy();
+    
+    if (green) {
+        hero.pickUpFlag(green);
+    } else if (black && hero.isReady("cleave")) {
+        hero.pickUpFlag(black);
+        // Рассеките!
+        hero.cleave(nearest);
+    } else if (nearest && hero.distanceTo(nearest) < 10) {
+        // Атакуйте!
+        hero.attack(nearest);
+    }
+    
+}
